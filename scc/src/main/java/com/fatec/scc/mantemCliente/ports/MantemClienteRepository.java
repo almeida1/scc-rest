@@ -11,8 +11,6 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.fatec.scc.mantemCliente.model.Cliente;
 
-
-
 @Repository
 public interface MantemClienteRepository extends JpaRepository<Cliente, Long> {
 	Optional<Cliente> findByCpf(String cpf);
