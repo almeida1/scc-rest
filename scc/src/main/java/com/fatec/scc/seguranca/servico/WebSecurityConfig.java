@@ -31,7 +31,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 	};
 	//recursos de consulta do tipo GET com acesso liberado
 	private static final String[] PUBLIC_MATCHERS_GET = {
-			"/api/v1/clientes"
+			"/api/v1/clientes/{cpf}"
 		
 	};
     @Override
@@ -66,6 +66,6 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 	}
     @Override
 	public void configure(WebSecurity web) throws Exception {
-		web.ignoring().antMatchers("/static/**", "/css/**", "/js/**", "/images/**", "/h2-console/**","/api/v1/clientes/**" );
+		web.ignoring().antMatchers("/static/**", "/css/**", "/js/**", "/images/**", "/h2-console/**","/api/v1/clientes/{cpf}**" );
 	}
   }
